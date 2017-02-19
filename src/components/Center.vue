@@ -24,24 +24,24 @@
 </template>
 
 <script>
-import firebase from 'firebase'
-var config = {
-  apiKey: 'AIzaSyCFkmsvmGI88cp8r20zm7i8WRFnvKnztnA',
-  authDomain: 'anello-fd933.firebaseapp.com',
-  databaseURL: 'https://anello-fd933.firebaseio.com',
-  storageBucket: 'anello-fd933.appspot.com',
-  messagingSenderId: '600294276469'
-}
-firebase.initializeApp(config)
-var Product = firebase.database().ref('product')
+// import firebase from 'firebase'
+// var config = {
+//   apiKey: 'AIzaSyCFkmsvmGI88cp8r20zm7i8WRFnvKnztnA',
+//   authDomain: 'anello-fd933.firebaseapp.com',
+//   databaseURL: 'https://anello-fd933.firebaseio.com',
+//   storageBucket: 'anello-fd933.appspot.com',
+//   messagingSenderId: '600294276469'
+// }
+// firebase.initializeApp(config)
+// var Product = firebase.database().ref('product')
 export default {
   mounted () {
-    let vm = this
-    Product.on('child_added', function (snapshot) {
-      var keys = snapshot.val()
-      keys.id = snapshot.key
-      vm.product.push(keys)
-    })
+    // let vm = this
+    // Product.on('child_added', function (snapshot) {
+    //   var keys = snapshot.val()
+    //   keys.id = snapshot.key
+    //   vm.product.push(keys)
+    // })
   },
   name: 'Contents',
   data () {
